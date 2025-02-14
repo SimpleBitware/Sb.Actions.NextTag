@@ -24,8 +24,10 @@ invalidTags.forEach(([current_tag]) => {
 const validTagsWithoutV = [
     ['1.2.3', '1.2.4'],
     ['1.2.3.4', '1.2.4'],
+    ['1.2.3.4-2ae67', '1.2.4'],
     ['v1.2.3', '1.2.4'],
     ['v1.2.3.4', '1.2.4'],
+    ['v1.2.3-2ae67', '1.2.4'],
   ];
 validTagsWithoutV.forEach(([current_tag, expected_next_tag]) => {
     test(`should return ${expected_next_tag} when preserve_v is false and current_tag is ${current_tag}`, () => {
@@ -36,8 +38,10 @@ validTagsWithoutV.forEach(([current_tag, expected_next_tag]) => {
 const validTagsWithV = [
     ['1.2.3', '1.2.4'],
     ['1.2.3.4', '1.2.4'],
+    ['1.2.3.4-2ae67', '1.2.4'],
     ['v1.2.3', 'v1.2.4'],
     ['v1.2.3.4', 'v1.2.4'],
+    ['v1.2.3-2ae67', 'v1.2.4'],
   ];
 validTagsWithV.forEach(([current_tag, expected_next_tag]) => {
     test(`should return ${expected_next_tag} when preserve_v is true and current_tag is ${current_tag}`, () => {
