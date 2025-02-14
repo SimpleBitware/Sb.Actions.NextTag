@@ -1,6 +1,6 @@
 {
     "name": "next-tag",
-    "description": "Generates next github tag from current_tag",
+    "description": "Generates next git tag from provided current_tag",
     "main": "src/main.js",
     "scripts": {
         "test": "jest"

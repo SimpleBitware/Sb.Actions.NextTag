@@ -1,5 +1,5 @@
-name: Generates next tag
-description: Generates next tag based on the current_tag in semantic versioning format
+name: Next tag
+description: Generates next tag based on provided current_tag
 inputs:
   preserve_v:
     required: false
