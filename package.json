@@ -1,0 +1,29 @@
+{
+    "name": "next-tag",
+    "description": "Generates next github tag from current_tag",
+    "main": "src/main.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SimpleBitware/Sb.Actions.NextTag.git"
+    },
+    "keywords": [
+        "github",
+        "actions",
+        "next-tag"
+    ],
+    "author": "SimpleBitware",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/actions/next-tag/issues"
+    },
+    "homepage": "https://github.com/actions/next-tag#readme",
+    "dependencies": {
+        "@actions/core": "^1.11.1"
+    },
+    "devDependencies": {
+        "jest": "^29.7.0"
+    }
+}

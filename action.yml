@@ -1,0 +1,16 @@
+name: Generates next tag
+description: Generates next tag based on the current_tag in semantic versioning format
+inputs:
+  preserve_v:
+    required: false
+    default: "false"
+    description: True to preserve the "v" in the generated tag if present in the current_tag otherwise false. Default is false.
+  current_tag:
+    required: true
+    description: The current tag in semantic versioning format
+outputs:
+  tag:
+    description: The next tag in semantic versioning format
+runs:
+  using: node20
+  main: src/main.js

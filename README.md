@@ -1,6 +1,6 @@
-# action-get-next-tag
-Generates next github tag from current_tag. Supports only semantic versioning. <br/>
-If current_tag is not formated correctly an error is thrown.
+# next-tag
+Generates next github tag from current_tag by increasing the patch number by 1. Supports only semantic versioning formatted tags. <br/>
+If current_tag is not formated correctly an error is thrown. <br/>
 
 ```
 on:
@@ -9,9 +9,9 @@ on:
       - '*'
 - name: Generate next tag
   id: next_tag
-  uses: actions/get-next-tag@v1.0.0
+  uses: actions/next-tag@v1.0.0
   with:
-    strip_v: true           # Optional: Remove 'v' character from version. Defaults to true.
+    preserve_v: true        # Optional: True to preserve the "v" in the generated tag if present in the current_tag otherwise false. Default is false.
     current_tag: 'v1.2.3'   # Required: Current tag
 
 - name: Use tag
