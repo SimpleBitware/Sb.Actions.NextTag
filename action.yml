@@ -1,5 +1,8 @@
 name: Next tag
 description: Generates next tag based on provided current_tag
+branding:
+  icon: tag
+  color: black
 inputs:
   preserve_v:
     required: false
