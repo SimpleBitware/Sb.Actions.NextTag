@@ -10,7 +10,7 @@ on:
       - '*'
 - name: Generate next tag
   id: next_tag
-  uses: actions/next-tag@v1.0.0
+  uses: SimpleBitware/next-tag@v1.0.0
   with:
     preserve_v: true        # Optional: True to preserve the "v" in the generated tag if present in the current_tag otherwise false. Default is false.
     current_tag: 'v1.2.3'   # Required: Current tag
