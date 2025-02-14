@@ -1,5 +1,5 @@
 # next-tag
-Generates next git tag from current_tag by increasing the patch number by 1. <br/>
+It generates next git tag from current_tag by increasing the patch number by 1. <br/>
 It supports semantic versioning formatted tags only. <br/>
 It throws an error when current_tag is not formated correctly. <br/>
 
