@@ -1,5 +1,6 @@
 # next-tag
-Generates next github tag from current_tag by increasing the patch number by 1. Supports only semantic versioning formatted tags. <br/>
+Generates next github tag from current_tag by increasing the patch number by 1. <br/>
+Supports only semantic versioning formatted tags. <br/>
 If current_tag is not formated correctly an error is thrown. <br/>
 
 ```
