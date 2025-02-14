@@ -1,0 +1,23 @@
+name: Build
+on:
+  workflow_dispatch:       # Allow running the workflow manually from the GitHub UI
+  push:
+    branches: [ 'main' ]   # Run the workflow when pushing to the main branch
+  pull_request:
+    branches: [ '*' ]      # Run the workflow for all pull requests
+  release:
+    types: [ published ]   # Run the workflow when a new GitHub release is published
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/setup-node@v4
+          with:
+            node-version: 20.x
+        - uses: actions/checkout@v4.1.6
+        - run: npm test
