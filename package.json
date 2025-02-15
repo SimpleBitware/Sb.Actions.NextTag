@@ -2,6 +2,7 @@
     "name": "next-tag",
     "description": "Generates next git tag from provided current_tag",
     "main": "src/main.js",
+    "type": "module",
     "scripts": {
         "test": "jest"
     },
