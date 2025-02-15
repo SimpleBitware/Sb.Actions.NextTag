@@ -32,10 +32,10 @@ jobs:
         steps:
         - name: Get current tag
           id: tag
-          uses: devops-actions/action-get-tag@v1.0.3
-          with:
-            strip_v: true
-            default: v0.0.0
+          run: |
+            git fetch --tags
+            latest_tag=$(git tag --list --sort=-version:refname "v*" | head -n 1)
+            echo "tag=${latest_tag}" >> $GITHUB_OUTPUT
 
         - name: Generate next tag
           id: next_tag
