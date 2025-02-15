@@ -24,3 +24,23 @@ jobs:
           run: |
             npm install
             npm test
+
+    e2e-tests:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Get current tag
+          id: tag
+          uses: devops-actions/action-get-tag@v1.0.3
+          with:
+            strip_v: true
+            default: v0.0.0
+
+        - name: Generate next tag
+          id: next_tag
+          uses: SimpleBitware/next-tag@v1.0.0
+          with:
+            preserve_v: true
+            current_tag: ${{ steps.tag.outputs.tag }}
+            
+        - name: Use next_tag
+          run: echo ${{steps.next_tag.outputs.tag}}
