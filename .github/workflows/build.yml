@@ -23,6 +23,7 @@ jobs:
         - name: Run unit tests
           run: |
             npm install
+            npm run build
             npm test
 
     e2e-tests:
