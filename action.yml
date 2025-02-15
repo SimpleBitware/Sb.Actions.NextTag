@@ -16,4 +16,4 @@ outputs:
     description: The next tag in semantic versioning format
 runs:
   using: node20
-  main: 'dist/index.js'
+  main: 'src/main.js'

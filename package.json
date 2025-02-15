@@ -6,15 +6,7 @@
     "scripts": {
         "start": "node src/main.js",
         "lint": "eslint .",
-        "test": "mocha",
-        "build": "ncc build src/main.js"
-    },
-    "jest": {
-        "transform": {},
-        "testEnvironment": "node",
-        "extensionsToTreatAsEsm": [
-            ".js"
-        ]
+        "test": "mocha"
     },
     "repository": {
         "type": "git",
@@ -28,14 +20,13 @@
     "author": "SimpleBitware",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/actions/next-tag/issues"
+        "url": "https://github.com/SimpleBitware/next-tag/issues"
     },
-    "homepage": "https://github.com/actions/next-tag#readme",
+    "homepage": "https://github.com/SimpleBitware/next-tag#readme",
     "dependencies": {
         "@actions/core": "^1.11.1"
     },
     "devDependencies": {
-        "mocha": "^11.1.0",
-        "@vercel/ncc": "^0.33.0"
+        "mocha": "^11.1.0"
     }
 }
