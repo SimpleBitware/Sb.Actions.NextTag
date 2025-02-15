@@ -1,5 +1,5 @@
-const core = require('@actions/core');
-const generateNextTag = require('../src/tag-helper');
+import { info, setOutput, setFailed } from '@actions/core';
+import generateNextTag from './tag-helper.js';
 
 function main() {
   try {
@@ -7,11 +7,11 @@ function main() {
     const preserve_v = process.env.INPUT_PRESERVE_V
     const nextTag = generateNextTag(current_tag, preserve_v)
 
-    core.info(`nextTag=${nextTag}`)
-    core.setOutput("tag", nextTag);
+    info(`nextTag=${nextTag}`)
+    setOutput("tag", nextTag);
   }
   catch (error) {
-    core.setFailed(error);
+    setFailed(error);
   }
 }
 

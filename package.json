@@ -2,8 +2,18 @@
     "name": "next-tag",
     "description": "Generates next git tag from provided current_tag",
     "main": "src/main.js",
+    "type": "module",
     "scripts": {
-        "test": "jest"
+        "start": "node src/main.js",
+        "lint": "eslint .",
+        "test": "mocha"
+    },
+    "jest": {
+        "transform": {},
+        "testEnvironment": "node",
+        "extensionsToTreatAsEsm": [
+            ".js"
+        ]
     },
     "repository": {
         "type": "git",
@@ -24,6 +34,6 @@
         "@actions/core": "^1.11.1"
     },
     "devDependencies": {
-        "jest": "^29.7.0"
+        "mocha": "^11.1.0"
     }
 }
