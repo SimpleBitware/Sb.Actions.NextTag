@@ -28,6 +28,14 @@ jobs:
     e2e-tests:
         runs-on: ubuntu-latest
         steps:
+        - uses: actions/setup-node@v4
+          with:
+            node-version: 20.x
+        - uses: actions/checkout@v4.1.6
+        - name: Run unit tests
+          run: |
+            npm install
+            
         - name: Get current tag
           id: tag
           uses: devops-actions/action-get-tag@v1.0.3
