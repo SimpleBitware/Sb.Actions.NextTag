@@ -22,7 +22,7 @@ jobs:
         - uses: actions/checkout@v4.1.6
         - name: Run unit tests
           run:  |
-            npm install --save-dev mocha
+            npm install
             npm test
 
     e2e-tests:
