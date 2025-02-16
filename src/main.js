@@ -5,10 +5,10 @@ function main() {
   try {
     const current_tag = process.env.INPUT_CURRENT_TAG
     const preserve_v = process.env.INPUT_PRESERVE_V
-    const nextTag = generateNextTag(current_tag, preserve_v)
+    const tag = generateNextTag(current_tag, preserve_v)
 
-    info(`nextTag=${nextTag}`)
-    setOutput("tag", nextTag);
+    info(`tag=${tag}`)
+    setOutput("tag", tag);
   }
   catch (error) {
     setFailed(error);

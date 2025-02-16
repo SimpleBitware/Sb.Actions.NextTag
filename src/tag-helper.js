@@ -6,11 +6,11 @@ function generateNextTag(current_tag, preserve_v) {
     if (!match || match.length <= 3)
         throw new Error("The provided current_tag format is not valid");
 
-    let nextTag = `${match[1]}.${match[2]}.${parseInt(match[3]) + 1}`;
+    let tag = `${match[1]}.${match[2]}.${parseInt(match[3]) + 1}`;
     if((preserve_v === "true" || preserve_v === true) && current_tag.startsWith("v"))
-        nextTag = "v" + nextTag
+        tag = "v" + tag
 
-    return nextTag;
+    return tag;
 }
 
 export default generateNextTag;
