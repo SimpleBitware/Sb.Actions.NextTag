@@ -44,3 +44,6 @@ jobs:
           with:
             preserve_v: true
             current_tag: ${{ steps.tag.outputs.tag }}
+
+        - name: Use tag
+          run: echo ${{steps.next_tag.outputs.tag}}
